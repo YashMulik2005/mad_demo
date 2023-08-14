@@ -155,18 +155,18 @@
             android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/signuptext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login if you already have account."
-            android:textSize="@dimen/_17ssp"
-            android:textStyle="bold"
             android:layout_below="@id/signupbtn"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"></TextView>
+            android:layout_marginTop="15dp"
+            android:text="Login if you already have account."
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold"></TextView>
 
         <LinearLayout
-            android:layout_below="@+id/text"
+            android:layout_below="@+id/signuptext"
             android:id="@+id/or"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

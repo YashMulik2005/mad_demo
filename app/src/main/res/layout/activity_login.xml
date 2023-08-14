@@ -119,7 +119,7 @@
             android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/logintext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Signup first if you don't have account."
@@ -130,7 +130,7 @@
             android:layout_marginTop="15dp"></TextView>
 
         <LinearLayout
-            android:layout_below="@+id/text"
+            android:layout_below="@+id/logintext"
             android:id="@+id/or"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

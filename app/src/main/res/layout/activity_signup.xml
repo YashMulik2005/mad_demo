@@ -4,169 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DEF5E5"
     tools:context=".SignupActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#0EA293"
-        android:gravity="center_vertical"
-        android:id="@+id/topnav">
-
-        <ImageView
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:src="@drawable/logo"
-            android:padding="@dimen/_4sdp"></ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Java Tutorial"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"></TextView>
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/topnav"
-        android:layout_marginTop="@dimen/_10sdp">
+        android:layout_marginVertical="@dimen/_6sdp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_175sdp"
+            android:src="@drawable/signupimage"
+            android:layout_centerHorizontal="true"
+            ></ImageView>
 
         <TextView
             android:id="@+id/log"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SIGNUP"
-            android:textSize="@dimen/_26ssp"
+            android:textSize="@dimen/_28ssp"
             android:textStyle="bold"
-            android:textColor="#0EA293"
-            android:layout_centerHorizontal="true"
+            android:textColor="#1C7E20"
+            android:layout_below="@+id/img"
+            android:layout_marginHorizontal="@dimen/_15sdp"
             ></TextView>
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/log2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Please register to login."
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
             android:layout_below="@+id/log"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:text="NAME:"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"></TextView>
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            ></TextView>
 
         <EditText
             android:id="@+id/inputname"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_31sdp"
-            android:layout_marginHorizontal="@dimen/_20sdp"
-            android:layout_below="@+id/name"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_below="@+id/log2"
             android:inputType="text"
+            android:layout_marginVertical="@dimen/_7sdp"
+            android:hint="Username"
+            android:textSize="@dimen/_16ssp"
             android:background="@drawable/rounded_textbox"
-            android:paddingHorizontal="@dimen/_17sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
             ></EditText>
-
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/inputname"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:text="EMAIL:"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"></TextView>
 
         <EditText
             android:id="@+id/inputemail"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_31sdp"
-            android:layout_marginHorizontal="@dimen/_20sdp"
-            android:layout_below="@+id/email"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_below="@+id/inputname"
             android:inputType="text"
+            android:layout_marginVertical="@dimen/_7sdp"
+            android:hint="Email"
+            android:textSize="@dimen/_16ssp"
             android:background="@drawable/rounded_textbox"
-            android:paddingHorizontal="@dimen/_17sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
             ></EditText>
-
-        <TextView
-            android:id="@+id/password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/inputemail"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginBottom="13dp"
-            android:text="Password:"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"></TextView>
 
         <EditText
             android:id="@+id/inputpass"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_31sdp"
-            android:layout_marginHorizontal="@dimen/_20sdp"
-            android:layout_below="@+id/password"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_7sdp"
+            android:layout_below="@+id/inputemail"
             android:inputType="text"
+            android:hint="Password"
+            android:textSize="@dimen/_16ssp"
             android:background="@drawable/rounded_textbox"
             android:paddingHorizontal="@dimen/_17sdp"
             ></EditText>
 
-        <TextView
-            android:id="@+id/m_no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/inputpass"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginBottom="13dp"
-            android:text="Mobile No:"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"></TextView>
         <EditText
             android:id="@+id/inputm_no"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_31sdp"
-            android:layout_marginHorizontal="@dimen/_20sdp"
-            android:layout_below="@+id/m_no"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_7sdp"
+            android:layout_below="@+id/inputpass"
             android:inputType="text"
+            android:hint="Mobile No."
+            android:textSize="@dimen/_16ssp"
             android:background="@drawable/rounded_textbox"
             android:paddingHorizontal="@dimen/_17sdp"
             ></EditText>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signupbtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Signup"
-            android:textSize="@dimen/_20ssp"
-            android:paddingHorizontal="30dp"
-            android:background="@drawable/rounded_corner"
             android:layout_below="@+id/inputm_no"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_7sdp"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="30dp"
+            android:text="Signup"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"></androidx.appcompat.widget.AppCompatButton>
 
+        <LinearLayout
+            android:id="@+id/signuplinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signupbtn"
+            android:orientation="horizontal"
+            android:gravity="center">
         <TextView
             android:id="@+id/signuptext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/signupbtn"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:text="Login if you already have account."
-            android:textSize="@dimen/_17ssp"
-            android:textStyle="bold"></TextView>
+            android:text="Already have account?"
+            android:textSize="@dimen/_15ssp"></TextView>
+
+            <TextView
+                android:id="@+id/naviagtelogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" log in"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"></TextView>
+
+        </LinearLayout>
 
         <LinearLayout
-            android:layout_below="@+id/signuptext"
+            android:layout_below="@+id/signuplinear"
             android:id="@+id/or"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

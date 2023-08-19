@@ -4,26 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:gravity="center"
     tools:context=".SplashActivity">
 
+    <RelativeLayout
+        android:id="@+id/circle"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:background="@drawable/circle_shape">
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/logo"
-        android:layout_centerInParent="true"
-        ></ImageView>
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:src="@drawable/logo"></ImageView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="JAVA TUTORIAL"
         android:textColor="@color/white"
-        android:textSize="35dp"
+        android:textSize="@dimen/_23sdp"
         android:textStyle="bold"
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
         ></TextView>
+    </RelativeLayout>
 
 </RelativeLayout>

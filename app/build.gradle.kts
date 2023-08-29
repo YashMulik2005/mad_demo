@@ -40,4 +40,5 @@ dependencies {
     implementation ("com.intuit.sdp:sdp-android:1.1.0")
     //responsive Text
     implementation ("com.intuit.ssp:ssp-android:1.1.0")
+    implementation ("com.airbnb.android:lottie:6.1.0")
 }

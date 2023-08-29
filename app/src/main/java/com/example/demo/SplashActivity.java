@@ -28,7 +28,7 @@ RelativeLayout im;
                 startActivity(in);
                 finish();
             }
-        },5000);
+        },8000);
 
     }
 }

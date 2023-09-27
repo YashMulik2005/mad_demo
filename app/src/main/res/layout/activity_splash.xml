@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context=".SplashActivity">
-
     <RelativeLayout
         android:id="@+id/circle"
         android:layout_width="@dimen/_300sdp"
@@ -20,7 +19,6 @@
             app:lottie_autoPlay="true"
             >
         </com.airbnb.lottie.LottieAnimationView>
-
 
     <TextView
         android:layout_below="@+id/anim"

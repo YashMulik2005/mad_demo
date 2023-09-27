@@ -1,0 +1,68 @@
+package com.example.demo;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+public class RecycleTopicAdapter extends RecyclerView.Adapter<RecycleTopicAdapter.ViewHolder> {
+
+    private ArrayList<TopicModel>array;
+    private Context context;
+    private TopicListner listner;
+    int count=1;
+    public RecycleTopicAdapter(@NonNull Context context, @NonNull ArrayList<TopicModel> arr,TopicListner listner){
+        this.context=context;
+        this.array=arr;
+        this.listner=listner;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView topicname;
+        private TextView topicindex;
+        private TextView topicdes;
+        private RelativeLayout relativeLayout;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            topicname  = itemView.findViewById(R.id.topicname);
+            topicindex= itemView.findViewById(R.id.topicindex);
+            topicdes = itemView.findViewById(R.id.topicdes);
+            relativeLayout = itemView.findViewById(R.id.topiccard);
+        }
+    }
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.topic_row, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        String name=array.get(position).getName();
+        holder.topicname.setText(name);
+        holder.topicindex.setText(Integer.toString(count));
+        count++;
+        holder.topicdes.setText(array.get(position).description);
+        holder.relativeLayout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                listner.onItemClick(array.get(position));
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return array.size();
+    }
+
+
+}

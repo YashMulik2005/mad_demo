@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -28,7 +30,7 @@ public class RecycleTopicAdapter extends RecyclerView.Adapter<RecycleTopicAdapte
         private TextView topicname;
         private TextView topicindex;
         private TextView topicdes;
-        private RelativeLayout relativeLayout;
+        private CardView relativeLayout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             topicname  = itemView.findViewById(R.id.topicname);
@@ -45,7 +47,7 @@ public class RecycleTopicAdapter extends RecyclerView.Adapter<RecycleTopicAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         String name=array.get(position).getName();
         holder.topicname.setText(name);
         holder.topicindex.setText(Integer.toString(count));

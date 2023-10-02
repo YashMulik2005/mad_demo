@@ -24,7 +24,7 @@ RelativeLayout im;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent in = new Intent(SplashActivity.this , TopicListActivity.class);
+                Intent in = new Intent(SplashActivity.this , BaseActivity.class);
                 startActivity(in);
                 finish();
             }
